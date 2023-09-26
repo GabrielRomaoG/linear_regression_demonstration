@@ -1,9 +1,5 @@
 import numpy as np
-
-xs = np.array([1, 2, 3, 4, 5, 6], dtype=np.float64)
-ys = np.array([5, 4, 6, 5, 6, 7], dtype=np.float64)
-
-
+import random2 as rd
 
 def get_slope_intercept(X, y):
     """
@@ -18,8 +14,21 @@ def get_slope_intercept(X, y):
     m_demoninator = X_mean ** 2 - np.mean(X**2)
     
     m = m_numerator / m_demoninator
+
+    b = y_mean - m * X_mean
     
-    return m
+    return m, b
+
+
+def generate_linear_data(x_range: tuple, m=1, b=1, variance=3):
+    
+    X = np.arange(x_range[0], x_range[1] + 1)
+    
+    y = np.array([(m*x + b) + rd.randint(-variance, variance) for x in X])
+    
+    return X, y
+    
+
 
 
 
