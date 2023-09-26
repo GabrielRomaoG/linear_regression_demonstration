@@ -10,24 +10,28 @@ def get_slope_intercept(X, y):
     X_mean = np.mean(X)
     y_mean = np.mean(y)
     
-    m_numerator = X_mean * y_mean - np.mean(X*y)
-    m_demoninator = X_mean ** 2 - np.mean(X**2)
+    slope_numerator = X_mean * y_mean - np.mean(X*y)
+    slope_demoninator = X_mean ** 2 - np.mean(X**2)
     
-    m = m_numerator / m_demoninator
+    slope = slope_numerator / slope_demoninator
 
-    b = y_mean - m * X_mean
+    intercept = y_mean - slope * X_mean
     
-    return m, b
+    return slope, intercept
 
 
-def generate_linear_data(x_range: tuple, m=1, b=1, variance=3):
+def generate_linear_data(x_range: tuple, slope=1, intercept=1, variance=3):
     
     X = np.arange(x_range[0], x_range[1] + 1)
     
-    y = np.array([(m*x + b) + rd.randint(-variance, variance) for x in X])
+    y = np.array([(slope*x + intercept) + rd.randint(-variance, variance) for x in X])
     
     return X, y
+
+
+def mean_absolute_error(y, y_predict):
     
+    return sum(np.abs(y - y_predict)) / len(y) if y is not None else None
 
 
 
