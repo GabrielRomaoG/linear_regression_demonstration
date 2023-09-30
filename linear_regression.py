@@ -21,6 +21,10 @@ def get_slope_intercept(X, y):
 
 
 def generate_linear_data(x_range: tuple, slope=1, intercept=1, variance=3):
+    """
+    Generate data with linear shape, according to the formula of linear regression: y = mx + b.
+    In addition, the y is summed with a variance to simulate a real world relation.
+    """
     
     X = np.arange(x_range[0], x_range[1] + 1)
     
@@ -30,7 +34,7 @@ def generate_linear_data(x_range: tuple, slope=1, intercept=1, variance=3):
 
 
 def mean_absolute_error(y, y_predict):
-    
+
     return sum(np.abs(y - y_predict)) / len(y) if y is not None else None
 
 
