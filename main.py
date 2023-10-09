@@ -2,6 +2,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import linear_regression as lr
 
+plt.style.use('dark_background')
+
+plt.rcParams.update({
+    'axes.facecolor': '#171721',  
+    'figure.facecolor': '#171721',
+})
+
 
 def main():
     x_range = (-20, 30)
@@ -27,13 +34,13 @@ def main():
         ax_main.set_xlim((x_range[0] - 10, x_range[1] + 10))
         ax_main.set_ylim((np.min(y) - 10, np.max(y) + 10))
 
-        ax_main.scatter(X[index:], y[index:])
-        ax_main.scatter(X[:index], partial_y)
+        ax_main.scatter(X[index:], y[index:], color='#5F68DE')
+        ax_main.scatter(partial_X, partial_y, color='#e65239')
         ax_main.plot(X, y_line, color='orange')
 
         ax_annotations.text(0, 0,
                             f"mae = {mae:.2f} \nModel: y = {m:.2f}*x + {b:.2f} \nReal: y = {slope}*x + {intercept}",
-                            fontsize=12, color='black')
+                            fontsize=12, color='white')
 
         ax_annotations.axis('off')
         plt.subplots_adjust(hspace=0.25)
