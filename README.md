@@ -2,6 +2,8 @@
 
 A visual demonstration of how the machine "learns" with a **linear regression** model using python and matplotlib.
 
+![Alt text](image.png)
+
 You can see also a video that i've posted on linkedin about this project if you speak portuguese: [Linear Regression Demo Linkedin](https://www.linkedin.com/feed/update/urn:li:activity:7117924200786407425/) 
 
 ## Main Results
