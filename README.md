@@ -18,5 +18,15 @@ You can see also a video that i've posted on linkedin about this project if you 
 2. Install required dependencies with 'pip install -r requirements.txt'
 3. Run 'main.py'
 
+## How to use
+
+After executing the file, a matplotlib window will appear, to interact with it you can click on the 'next iteration' button. 
+
+When you click on this button the model will use one more data point each time, so if you click 3 times, it will use 3 data points to fit.
+
+It's possible to see that when the model progressively uses more data, the error indicator (MAE) will dicrease and the model function will be closer to the real function.
+
+Beyond that, the line that the model creates will follow better the generated data.
+
 
 
