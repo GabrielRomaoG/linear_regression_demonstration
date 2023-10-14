@@ -12,4 +12,11 @@ You can see also a video that i've posted on linkedin about this project if you 
 - Created a function to generate data with a linear shape
 - Calculated the accuracy of the model using **MAE** (mean absolute error)
 
+## Installation
+
+1. Clone the repository
+2. Install required dependencies with 'pip install -r requirements.txt'
+3. Run 'main.py'
+
+
 
