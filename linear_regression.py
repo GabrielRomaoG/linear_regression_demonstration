@@ -1,5 +1,8 @@
 import numpy as np
 import random2 as rd
+import warnings
+
+warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
 def get_slope_intercept(X, y):
